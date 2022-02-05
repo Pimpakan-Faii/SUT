@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#FF5E6B"
+             Title="รายละเอียด"
+             x:Class="SUT.Views.Newcanteendetails">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HasShadow="True"
+BorderColor="DarkGray"
+CornerRadius="5"
+Margin="20"
+WidthRequest="300"
+HeightRequest="300"
+HorizontalOptions="Center"
+VerticalOptions="CenterAndExpand">
+                <StackLayout>
+
+                    <Image HeightRequest="150" WidthRequest="150" Source="{Binding Image}" />
+                    <Label Text="{Binding Title}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                    <Label Text="{Binding Time}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                    <Label Text="{Binding Dis}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                    <Label Text="{Binding Rate}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+
+            </Frame>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

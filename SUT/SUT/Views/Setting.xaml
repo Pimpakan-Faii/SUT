@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SUT.ViewModels"
+             BackgroundColor="#FF5E6B"
+             Title="ข้อมูลของฉัน"
+             x:Class="SUT.Views.Setting">
+
+    <ContentPage.BindingContext>
+        <local:settingViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Margin="0,15,0,0" Text="ข้อมูลของฉัน" FontSize="45" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center"/>
+
+            <Frame HasShadow="True"
+BorderColor="DarkGray"
+CornerRadius="5"
+Margin="20"
+HeightRequest="350"
+                   WidthRequest="300"
+HorizontalOptions="Center"
+VerticalOptions="CenterAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label FontSize="Large" Grid.Column="0" Grid.Row="1" Text="Name"/>
+                    <Entry Placeholder="Password" FontSize="Large" Grid.Column="0" Grid.Row="2" IsPassword="True"
+                   Text="{Binding sets.Password}"/>
+                    <Entry  Placeholder="Confirm" Grid.Column="0" Grid.Row="3" FontSize="Large" IsPassword="True"
+                     Text="{Binding sets.Confirm}"/>
+                    <Button Text="เปลี่ยนรหัสผ่าน" Grid.Column="0" Grid.Row="4" FontSize="Large" CornerRadius="10"
+                    Command="{Binding Registercommand}" BackgroundColor="#FF5E6B"/>
+                </Grid>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
