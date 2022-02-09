@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#FF5E6B"
+             Title="SUT IN SIDE"
+             x:Class="SUT.Views.Registerpage">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Label HorizontalTextAlignment="Center" Text="REGISTER" FontSize="50"/>
+            <Frame HasShadow="True" 
+                   BackgroundColor="#FEC5CA"                 
+                    BorderColor="#FEC5CA"
+                    CornerRadius="10"
+                    Margin="20"
+                    HeightRequest="300"
+                    WidthRequest="300"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand">
+                <StackLayout>
+
+                    <Entry Placeholder="Username" Margin="10,10,10,0" VerticalOptions="Center" Text="{Binding Login.Email}" TextColor="Black" />
+                    <Entry Placeholder="Password" Margin="10,10,10,0" VerticalOptions="Center" Text="{Binding Login.Password}" TextColor="Black"/>
+                    <Entry Placeholder="Confirm"  Margin="10,10,10,0" VerticalOptions="Center" IsPassword="True" Text="{Binding Register.Confirm}"/>
+                    
+                
+                    <Button  Margin="10,30,10,0" VerticalOptions="Center" Text="REGISTER" TextColor="White"  CornerRadius="10" BackgroundColor="#FF5E6B" Command="{Binding RegisCommand}"/>
+               
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

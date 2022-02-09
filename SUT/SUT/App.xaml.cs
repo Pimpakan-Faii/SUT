@@ -14,7 +14,11 @@ namespace SUT
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new Views.LoginPage())
+            {
+                BarBackgroundColor = Color.White,
+                BarTextColor = Color.Black
+            };
         }
 
         protected override void OnStart()

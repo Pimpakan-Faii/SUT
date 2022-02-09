@@ -4,11 +4,31 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="SUT IN SIDE"
              x:Class="SUT.Views.LoginPage"
+             BackgroundColor="#FF5E6B"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+            <Label HorizontalTextAlignment="Center" Text="LOGIN" FontSize="50"/>
+            <Frame HasShadow="True" 
+                   BackgroundColor="#FEC5CA"                 
+                    BorderColor="#FEC5CA"
+                    CornerRadius="10"
+                    Margin="20"
+                    HeightRequest="300"
+                    WidthRequest="300"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Entry Placeholder="Username" Margin="10,10,10,0" VerticalOptions="Center" Text="{Binding Login.Email}" TextColor="Black" />
+                    <Entry Placeholder="Password" Margin="10,10,10,0" VerticalOptions="Center" IsPassword="True" Text="{Binding Login.Password}" TextColor="Black"/>
+
+                    <Button  Margin="10,30,10,0" VerticalOptions="Center" Text="Login" TextColor="White"  CornerRadius="10" BackgroundColor="#FF5E6B" Command="{Binding LoginCommand}"/>
+                    <Button  Margin="10,20,10,0" VerticalOptions="Center" Text="Register" TextColor="White"  CornerRadius="10" BackgroundColor="#FF5E6B" Command="{Binding RegisCommand}"/>
+
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

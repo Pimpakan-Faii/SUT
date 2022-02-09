@@ -23,13 +23,13 @@ namespace SUT.ViewModels
         {
             newrcanteens = new ObservableCollection<Newrcanteen>();
 
-            newrcanteens.Add(new Newrcanteen { ID = 1, Title = "แอนบะหมี่", Time = "08.00 - 11.00 โมง", Rate = "5", Image = "meros", Dis = "xxxxxx" });
-            newrcanteens.Add(new Newrcanteen { ID = 2, Title = "ไข่ลาวา", Time = "08.00 - 11.00 โมง", Rate = "5", Image = "meros", Dis = "xxxxxx" });
+            newrcanteens.Add(new Newrcanteen { ID = 1, Title = "Annbamie", Time = "08.00 - 11.00 โมง", Rate = "5 ดาว", Image = "meros", Dis = "xxxxxx" });
+            newrcanteens.Add(new Newrcanteen { ID = 2, Title = "EggLavaNoodle", Time = "08.00 - 11.00 โมง", Rate = "5 ดาว", Image = "meros", Dis = "xxxxxx" });
 
             favcanteens = new ObservableCollection<Favcanteen>();
 
-            favcanteens.Add(new Favcanteen { ID = 1, Title = "แอนบะหมี่", Time = "08.00 - 11.00 โมง", Rate = "5", Image = "meros" });
-            favcanteens.Add(new Favcanteen { ID = 2, Title = "ไข่ลาวา", Time = "08.00 - 11.00 โมง", Rate = "5", Image = "meros" });
+            favcanteens.Add(new Favcanteen { ID = 1, Title = "Annbamie", Time = "08.00 - 11.00 โมง", Rate = "5 ดาว", Image = "meros" });
+            favcanteens.Add(new Favcanteen { ID = 2, Title = "EggLavaNoodle", Time = "08.00 - 11.00 โมง", Rate = "5 ดาว", Image = "meros" });
 
             SelectedCommand = new Command(async () =>
             {

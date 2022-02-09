@@ -37,7 +37,7 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Label Grid.Row="0" Grid.Column="0" Text="สมศรี มีสุข" TextColor="Black" FontSize="20" FontFamily="Prompt-Black"/>
-                        <SearchBar Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="ค้นหาร้าน" PlaceholderColor="{OnPlatform iOS='White', Android='#989898'}"
+                        <SearchBar TextChanged="textchange" x:Name="Search" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="ค้นหาร้าน" PlaceholderColor="{OnPlatform iOS='White', Android='#989898'}"
                                    BackgroundColor="{OnPlatform iOS='Transparent', Android='White'}" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" TextColor="{OnPlatform iOS='White', Android='#000000'}" 
                                    CancelButtonColor="White" Margin="0,0,10,0"/>
                     </Grid>
@@ -79,7 +79,7 @@
                 
                 <StackLayout  Margin="20,0" Grid.Row="2" Grid.Column="1" >
                     <Label Text="ร้านอาหารเกิดใหม่" FontSize="25" FontAttributes="Bold" TextColor="White"/>
-                    <CollectionView ItemsSource="{Binding newrcanteens}" SelectionMode="Single"
+                    <CollectionView x:Name="Coli" ItemsSource="{Binding newrcanteens}" SelectionMode="Single"
                         SelectedItem="{Binding selectedNew}" SelectionChangedCommand="{Binding SelectedCommand}"
                                  WidthRequest="90"
                                  HeightRequest="90"
@@ -115,7 +115,7 @@
                                      Grid.Column="1"
                                      Text="{Binding Time}"
                                      FontAttributes="Italic"
-                                     FontSize="15" />
+                                     FontSize="14" />
 
                                      <Label Grid.Row="1"
                                     Grid.Column="1"
